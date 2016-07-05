@@ -1,14 +1,11 @@
 package es.esy.kinketkuena.test_fire;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -40,7 +37,8 @@ private Firebase mRef;
 
             }
         });
-ok.setOnClickListener(new View.OnClickListener() {
+
+        ok.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         mRef.setValue("ok");
@@ -53,6 +51,10 @@ ok.setOnClickListener(new View.OnClickListener() {
                 mRef.setValue("bad");
             }
         });
+    }
+    public void signup(View view){
+        Intent intent = new Intent(this, signup.class);
+        startActivity(intent);
     }
 
 }
