@@ -56,5 +56,9 @@ private Firebase mRef;
         Intent intent = new Intent(this, signup.class);
         startActivity(intent);
     }
+    public void signin(View view){
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
 
 }

@@ -35,12 +35,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="login"
-        android:id="@+id/button"
+        android:id="@+id/singin"
         android:layout_below="@+id/pass"
         android:layout_alignRight="@+id/pass"
         android:layout_alignEnd="@+id/pass"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="login" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -48,10 +49,18 @@
         android:layout_height="wrap_content"
         android:text="sign UP"
         android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button"
+        android:layout_below="@+id/singin"
+        android:layout_alignRight="@+id/singin"
+        android:layout_alignEnd="@+id/singin"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/progressBar2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false" />
 
 </RelativeLayout>
