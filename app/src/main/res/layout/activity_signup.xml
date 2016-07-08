@@ -42,5 +42,15 @@
         android:layout_alignEnd="@+id/field_password"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="signup" />
+        android:onClick="onClick" />
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp"
+        android:indeterminate="false" />
+
 </RelativeLayout>

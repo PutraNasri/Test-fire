@@ -23,7 +23,7 @@ private Firebase mRef;
         Button bad = (Button)findViewById(R.id.buttonbad);
         final TextView mtext = (TextView) findViewById(R.id.textView);
 
-        mRef = new Firebase("https://test-c5f96.firebaseio.com/condition");
+        mRef = new Firebase("https://test-fire-55fba.firebaseio.com/condition");
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
