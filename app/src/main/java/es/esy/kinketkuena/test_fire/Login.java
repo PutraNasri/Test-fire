@@ -77,12 +77,12 @@ public class Login extends AppCompatActivity {
         String password = mPasswordField.getText().toString().trim();
 
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Masukkan Email!", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Masukkan Password!", Toast.LENGTH_SHORT).show();
             return;
         }
         progressBar.setVisibility(View.VISIBLE);
@@ -90,12 +90,16 @@ public class Login extends AppCompatActivity {
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        startActivity(new Intent(Login.this, MainActivity.class));
-                        finish();
+
                         if (!task.isSuccessful()) {
                         //    Log.w(TAG, "signInWithEmail", task.getException());
-                            Toast.makeText(Login.this, "Authentication failed.",
+                            Toast.makeText(Login.this, "gagal login.",
                                     Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
+                        }
+                        else {
+                            startActivity(new Intent(Login.this, profil.class));
+                            finish();
                         }
 
 
@@ -106,7 +110,11 @@ public class Login extends AppCompatActivity {
 
 
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        progressBar.setVisibility(View.GONE);
+    }
 
 
 

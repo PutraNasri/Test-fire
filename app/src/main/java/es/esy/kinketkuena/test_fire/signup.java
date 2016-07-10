@@ -122,7 +122,7 @@ public class signup extends Activity  {
                                     Toast.makeText(signup.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(signup.this, MainActivity.class));
+                                    startActivity(new Intent(signup.this, addprofil.class));
                                     finish();
                                 }
                             }
